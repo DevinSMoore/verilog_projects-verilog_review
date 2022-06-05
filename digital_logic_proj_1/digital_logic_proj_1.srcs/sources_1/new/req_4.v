@@ -21,6 +21,13 @@
 
 
 module req_4(
-
+    input [11:0] i_sw,
+    output [9:0] o_led,
+    output [2:0] o_RGB_led_A,
+    output o_RGB_led_B
     );
+    
+assign o_led[9:0] = i_sw[9:0];
+assign o_RGB_led_A[1:0] = i_sw[11:10];
+    
 endmodule
